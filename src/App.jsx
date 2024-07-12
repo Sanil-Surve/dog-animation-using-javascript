@@ -60,11 +60,16 @@ const App = () => {
     };
   }, [draw, speed, isAnimating]);
 
-  const handleStop = () => setIsAnimating(false);
+  const handleStop = () => {
+    setIsAnimating(true);
+    setSpeed(20);
+  }
+
   const handleWalk = () => {
     setIsAnimating(true);
     setSpeed(5);
   };
+
   const handleRun = () => {
     setIsAnimating(true);
     setSpeed(1);
@@ -72,13 +77,12 @@ const App = () => {
 
   return (
     <>
-      <header>Dog Animation</header>
+      <header>DogSprite Animator</header>
       <canvas id="canvas1" ref={canvasRef}></canvas>
-      <footer>DogSprite Animator</footer>
       <div className="controls">
-        <button onClick={handleStop}>Stop</button>
-        <button onClick={handleWalk}>Walk</button>
-        <button onClick={handleRun}>Run</button>
+        <button onClick={handleStop}>Run Slow</button>
+        <button onClick={handleWalk}>Run</button>
+        <button onClick={handleRun}>Run Fast</button>
       </div>
     </>
   );
