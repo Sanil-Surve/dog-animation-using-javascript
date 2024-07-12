@@ -1,0 +1,86 @@
+:root {
+  --background-gradient: linear-gradient(135deg, rgb(53, 36, 137), rgb(19, 64, 199));
+  --canvas-bg-color: rgba(19, 64, 199, 0.8);
+  --canvas-border-color: rgb(60, 150, 168);
+  --box-shadow-color: rgba(0, 0, 0, 0.5);
+  --button-bg-color: rgb(60, 150, 168);
+  --button-hover-bg-color: rgb(30, 100, 130);
+  --text-shadow-color: rgba(0, 0, 0, 0.5);
+  --font-family: 'Arial', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  font-family: var(--font-family);
+  background: var(--background-gradient);
+  color: white;
+}
+
+#canvas1 {
+  width: 600px;
+  height: 600px;
+  background-color: var(--canvas-bg-color);
+  border: 5px solid var(--canvas-border-color);
+  border-radius: 10px;
+  box-shadow: 0 0 20px var(--box-shadow-color);
+}
+
+header,
+footer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 2px 2px 4px var(--text-shadow-color);
+}
+
+header {
+  top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+footer {
+  bottom: 10px;
+  font-size: 18px;
+}
+
+.controls {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--button-bg-color);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.6);
+}
