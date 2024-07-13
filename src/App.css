@@ -25,7 +25,8 @@ body {
   overflow: hidden;
   font-family: var(--font-family);
   background: var(--background-gradient);
-  background-image: url("road-image.jpg");
+  background-image: url("/background-image.gif");
+  background-size: cover;
   color: white;
 }
 
@@ -46,7 +47,7 @@ header {
   top: 10px;
   font-size: 24px;
   font-weight: bold;
-  color: rgba(170, 4, 4, 0.809);
+  color: rgba(255, 255, 255, 0.893);
 }
 
 footer {
