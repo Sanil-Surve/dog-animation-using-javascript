@@ -1,6 +1,6 @@
 :root {
   --background-gradient: linear-gradient(135deg, rgb(53, 36, 137), rgb(19, 64, 199));
-  --canvas-bg-color: rgba(19, 64, 199, 0.8);
+  --canvas-bg-color: rgba(19, 64, 199, 0);
   --canvas-border-color: rgb(60, 150, 168);
   --box-shadow-color: rgba(0, 0, 0, 0.5);
   --button-bg-color: rgb(60, 150, 168);
@@ -25,16 +25,13 @@ body {
   overflow: hidden;
   font-family: var(--font-family);
   background: var(--background-gradient);
+  background-image: url("road-image.jpg");
   color: white;
 }
 
 #canvas1 {
   width: 600px;
   height: 600px;
-  background-color: var(--canvas-bg-color);
-  border: 5px solid var(--canvas-border-color);
-  border-radius: 10px;
-  box-shadow: 0 0 20px var(--box-shadow-color);
 }
 
 header,
@@ -49,6 +46,7 @@ header {
   top: 10px;
   font-size: 24px;
   font-weight: bold;
+  color: rgba(170, 4, 4, 0.809);
 }
 
 footer {
